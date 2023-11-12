@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2edc4;
+}
+
+.book-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    perspective: 1000px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    border: 8px solid #cf550f;
+}
+
+.book-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+}
+
+.book-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    transition: opacity 0.5s, font-weight 0.5s;
+}
+
+.book-color1 { background-color: #0e8686; }
+.book-color2 { background-color: #9d7c0f; }
+.book-color3 { background-color: yellowgreen; }
+.book-color4 { background-color: #a30707; }
+
+.book-container:hover {
+    transform: translateY(80px);
+}
+
+.book-container:hover .book-content {
+    opacity: 1;
+    font-weight: bold;
+}
+
+
